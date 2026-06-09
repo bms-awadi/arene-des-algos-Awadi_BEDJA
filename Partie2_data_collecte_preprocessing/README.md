@@ -23,3 +23,31 @@ Telco Customer Churn Dataset
 - Sélection de variables
 - Split et scaling
 - Préparation finale pour le Machine Learning
+
+### chargement des données
+
+Le dataset est téléchargé automatiquement via kagglehub puis copié dans le dossier `data/`.
+
+### Audit qualité
+Trois scénarios ont été testés :
+
+#### Cas normal
+
+Dataset complet : aucune anomalie détectée.
+
+#### Cas limite
+
+Audit exécuté sur un dataset ne contenant qu'une seule classe
+de churn (Yes puis No).
+
+Le rapport reste fonctionnel et affiche correctement 100 %.
+
+#### Cas adversarial
+
+Le dataset présente un déséquilibre de classes :
+
+- No : 73.46 %
+- Yes : 26.54 %
+
+Cette information est visible immédiatement dans le rapport
+et sera prise en compte lors de l'évaluation des modèles.
