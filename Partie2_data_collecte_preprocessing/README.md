@@ -105,3 +105,31 @@ Les modalités possèdent un ordre apparent :
 Cependant, un encodage ordinal imposerait une distance artificielle entre les catégories.
 
 Le One-Hot Encoding évite cette hypothèse et reste plus robuste pour les modèles classiques.
+
+### Phase 5 - Détection des outliers
+
+Méthode utilisée :
+
+- Visualisation par boxplots
+- Détection via la règle IQR
+
+Colonnes étudiées :
+
+- tenure
+- MonthlyCharges
+- TotalCharges
+
+Résultats :
+
+Aucune des trois variables numériques ne présente de valeurs aberrantes selon le critère IQR.
+
+| Variable | Nombre d'outliers |
+|-----------|-----------|
+| tenure | 0 |
+| MonthlyCharges | 0 |
+| TotalCharges | 0 |
+
+Conclusion :
+
+Aucune suppression ou transformation n'a été appliquée.
+Les données numériques sont conservées telles quelles.
