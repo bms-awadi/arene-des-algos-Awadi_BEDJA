@@ -198,3 +198,34 @@ Observation :
 
 Une variable fortement corrélée n'est pas nécessairement la plus importante pour un modèle prédictif.
 
+
+### Phase 7 - PCA
+
+Les données ont été standardisées avant application du PCA.
+
+### PCA à 2 composantes
+
+Variance expliquée :
+
+- PC1 : 33.18 %
+- PC2 : 11.99 %
+
+Variance cumulée :
+
+- 45.17 %
+
+### Nombre de composantes nécessaires
+
+Pour conserver 90 % de la variance :
+
+- 15 composantes sont nécessaires
+
+### Interprétation
+
+Le PCA permet une réduction importante de la dimension :
+
+- 30 variables -> 2 composantes
+
+Cependant, cette réduction conserve moins de la moitié de l'information du dataset.
+
+Le PCA est donc utilisé ici comme outil d'exploration visuelle plutôt que comme remplacement des variables originales.
