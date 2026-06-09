@@ -106,7 +106,7 @@ Cependant, un encodage ordinal imposerait une distance artificielle entre les ca
 
 Le One-Hot Encoding évite cette hypothèse et reste plus robuste pour les modèles classiques.
 
-### Phase 5 - Détection des outliers
+### Phase 4 - Détection des outliers
 
 Méthode utilisée :
 
@@ -133,3 +133,40 @@ Conclusion :
 
 Aucune suppression ou transformation n'a été appliquée.
 Les données numériques sont conservées telles quelles.
+
+### Phase 5 - Corrélations et multicolinéarité
+
+#### Corrélations observées
+
+| Variable 1 | Variable 2 | Corrélation |
+|------------|------------|-------------|
+| tenure | TotalCharges | 0.825 |
+| MonthlyCharges | TotalCharges | 0.651 |
+| tenure | MonthlyCharges | 0.248 |
+
+Une forte corrélation existe entre `TotalCharges` et `tenure`.
+
+Cela est cohérent avec la définition métier :
+
+TotalCharges ≈ tenure × MonthlyCharges
+
+#### Analyse VIF
+
+| Variable | VIF |
+|-----------|------:|
+| tenure | 6.32 |
+| MonthlyCharges | 3.36 |
+| TotalCharges | 8.07 |
+
+Une multicolinéarité modérée à forte est observée.
+
+#### Test de validation
+
+Une variable dupliquée artificiellement (`tenure_clone`) produit un VIF infini, ce qui confirme le bon fonctionnement de l'analyse.
+
+#### Décision
+
+Les variables sont conservées.
+
+Même si une redondance existe, elles portent une information métier utile et restent exploitables pour les modèles de classification envisagés.
+
