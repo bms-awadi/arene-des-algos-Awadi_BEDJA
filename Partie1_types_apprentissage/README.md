@@ -1,4 +1,4 @@
-# Arene des Algos — Awadi & Bedja
+# Arene des Algos
 
 Projet ML de bout en bout : pipeline supervisé, classement d'algorithmes, clustering non-supervisé, scaling, visualisations.
 
