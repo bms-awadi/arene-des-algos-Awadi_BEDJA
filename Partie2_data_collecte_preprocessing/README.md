@@ -73,3 +73,35 @@ Pourquoi l'imputation ?
 
 Les 11 lignes représentent moins de 0.2 % du dataset.
 L'imputation permet de conserver toutes les observations tout en limitant l'influence des valeurs extrêmes grâce à l'utilisation de la médiane.
+
+### Phase 3 - Encodage des variables catégorielles
+
+Actions réalisées :
+
+- suppression de la colonne `customerID`
+- encodage One-Hot des variables catégorielles
+- transformation du dataset en données 100 % numériques
+
+Résultat :
+
+- dimensions avant : (7043, 20)
+- dimensions après : (7043, 31)
+- aucune colonne de type object restante
+
+Pourquoi supprimer customerID ?
+
+Chaque client possède un identifiant unique.
+
+Un encodage One-Hot aurait créé 7043 colonnes supplémentaires sans apporter d'information utile au modèle.
+
+Pourquoi utiliser One-Hot sur Contract ?
+
+Les modalités possèdent un ordre apparent :
+
+- Month-to-month
+- One year
+- Two year
+
+Cependant, un encodage ordinal imposerait une distance artificielle entre les catégories.
+
+Le One-Hot Encoding évite cette hypothèse et reste plus robuste pour les modèles classiques.
