@@ -203,7 +203,7 @@ Une variable fortement corrélée n'est pas nécessairement la plus importante p
 
 Les données ont été standardisées avant application du PCA.
 
-### PCA à 2 composantes
+#### PCA à 2 composantes
 
 Variance expliquée :
 
@@ -214,13 +214,13 @@ Variance cumulée :
 
 - 45.17 %
 
-### Nombre de composantes nécessaires
+#### Nombre de composantes nécessaires
 
 Pour conserver 90 % de la variance :
 
 - 15 composantes sont nécessaires
 
-### Interprétation
+#### Interprétation
 
 Le PCA permet une réduction importante de la dimension :
 
@@ -229,3 +229,29 @@ Le PCA permet une réduction importante de la dimension :
 Cependant, cette réduction conserve moins de la moitié de l'information du dataset.
 
 Le PCA est donc utilisé ici comme outil d'exploration visuelle plutôt que comme remplacement des variables originales.
+
+### Phase 8 - Préparation finale Machine Learning
+
+Les données ont été séparées en :
+
+- 80 % entraînement
+- 20 % test
+
+Le découpage utilise une stratification afin de conserver la proportion de churn observée dans le dataset original.
+
+#### Standardisation
+
+Un StandardScaler est entraîné uniquement sur les données d'entraînement.
+
+Les données de test sont transformées avec ce même scaler.
+
+Cette approche évite toute fuite de données entre les ensembles d'entraînement et de test.
+
+#### Résultat
+
+Dataset final prêt pour la phase de modélisation :
+
+- X_train
+- X_test
+- y_train
+- y_test
