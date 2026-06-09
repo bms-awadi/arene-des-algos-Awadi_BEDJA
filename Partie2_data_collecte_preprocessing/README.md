@@ -170,3 +170,31 @@ Les variables sont conservées.
 
 Même si une redondance existe, elles portent une information métier utile et restent exploitables pour les modèles de classification envisagés.
 
+### Phase 6 - Variables discriminantes
+
+Trois approches ont été comparées :
+
+- corrélation avec la cible
+- information mutuelle
+- importance Random Forest
+
+Variables apparaissant régulièrement parmi les plus importantes :
+
+- tenure
+- Contract_Two year
+- InternetService_Fiber optic
+- MonthlyCharges
+- TotalCharges
+- PaymentMethod_Electronic check
+
+Interprétation métier :
+
+- les clients anciens churnent moins
+- les contrats longs fidélisent davantage
+- la fibre est associée à un risque de churn plus élevé
+- les montants facturés jouent un rôle important
+
+Observation :
+
+Une variable fortement corrélée n'est pas nécessairement la plus importante pour un modèle prédictif.
+
