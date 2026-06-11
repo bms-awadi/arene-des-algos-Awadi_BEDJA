@@ -31,6 +31,7 @@ Démontrer qu'un modèle "moins précis" peut coûter 2-3× moins cher en fraude
 | **1** | EDA, scaling Amount/Time, split train/val/test stratifié |
 | **2** | Bootstrap OOB, stabilité modèle accuracy trompeuse confirmée sur dataset déséquilibré |
 | **3** | Validation croisée k-fold, LOO impossible sur déséquilibre, StratifiedKFold vs standard |
+| **4** | Métriques métier, coût FN/FP, RF champion coût 294 vs LR 471 vs paresseux 990 |
 
 ---
 
