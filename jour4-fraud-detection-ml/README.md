@@ -28,6 +28,7 @@ Démontrer qu'un modèle "moins précis" peut coûter 2-3× moins cher en fraude
 | Phase | Description |
 |-------|-------------|
 | **0** | Setup du projet, dataset Kaggle, README |
+| **1** | EDA, scaling Amount/Time, split train/val/test stratifié |
 
 
 ---
