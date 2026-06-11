@@ -29,6 +29,7 @@ Démontrer qu'un modèle "moins précis" peut coûter 2-3× moins cher en fraude
 |-------|-------------|
 | **0** | Setup du projet, dataset Kaggle, README |
 | **1** | EDA, scaling Amount/Time, split train/val/test stratifié |
+| **2** | Bootstrap OOB, stabilité modèle accuracy trompeuse confirmée sur dataset déséquilibré |
 
 
 ---
