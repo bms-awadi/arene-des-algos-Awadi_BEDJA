@@ -2,6 +2,7 @@
 data/*.csv
 data/*.zip
 data/*.parquet
+data/
 
 # Environnement Python
 .venv/
