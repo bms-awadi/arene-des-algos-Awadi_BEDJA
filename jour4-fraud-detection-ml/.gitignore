@@ -1,0 +1,23 @@
+# Data (trop lourd pour git)
+data/*.csv
+data/*.zip
+data/*.parquet
+
+# Environnement Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+
+# IDE
+.vscode/
+.idea/
+
+# Kaggle credentials
+kaggle.json
+~/.kaggle/
